@@ -25,4 +25,23 @@ public class JsonTestData {
 
         return expData;
     }
+
+    public static JSONObject reqDataCreate(){
+        JSONObject reqData=new JSONObject();
+        reqData.put("title","Ahmet");
+        reqData.put("body","Merhaba");
+        reqData.put("userId",10);
+        reqData.put("id",70);
+
+        return reqData;
+    }
+    public static JSONObject expDataCreate(){
+        JSONObject expData=new JSONObject();
+        expData.put("title","Ahmet");
+        expData.put("body","Merhaba");
+        expData.put("userId",10);
+        expData.put("id",70);
+
+        return expData;
+    }
 }
