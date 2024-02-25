@@ -51,4 +51,34 @@ public class DummyTestData {
 
         return expData;
     }
+
+    public static JSONObject expectedBodyCreate(){
+        /*
+        {
+ "status":"success",
+ "data":{
+         "id":3,
+         "employee_name":"Ashton Cox",
+         "employee_salary":86000,
+         "employee_age":66,
+         "profile_image":""
+         },
+ "message":"Successfully! Record has been fetched."
+}
+         */
+        JSONObject innerBody=new JSONObject();
+        innerBody.put("id",3);
+        innerBody.put("employee_name","Ashton Cox");
+        innerBody.put("employee_salary",86000);
+        innerBody.put("employee_age",66);
+        innerBody.put("profile_image","");
+
+
+        JSONObject expBody=new JSONObject();
+        expBody.put("status","success");
+        expBody.put("data",innerBody);
+        expBody.put("message","Successfully! Record has been fetched.");
+
+        return expBody;
+    }
 }
